@@ -1,3 +1,4 @@
+
   <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@
   </head>
 
   <body>
-      <!-- Page Content -->
+  	  <!-- Page Content -->
     <div class="container">
 
       <div class="row">
@@ -23,39 +24,26 @@
         <div class="col-lg-14">
 
           <!-- Title -->
-    <h1 class="mt-4">
- <h1>Listing articles</h1>
-                  <!-- Author -->
+		<h1 class="mt-4">
+		<h1>Edit article</h1>
+				          <!-- Author -->
           <p class="lead">
             by
             <a href="#"> Sijia Liang</a>
           </p>
+          <hr>
+          <!-- Date/Time -->
+          <p>Posted on January 1, 2018 at 12:00 PM</p>
+
+  <hr>
+<%= render 'form' %>
  
-<table>
-  <tr>
-    <th>Articles</th>
-    <th>Content</th>
-    <th colspan="2"></th>
-  </tr>
- 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-  <%= link_to 'New article', new_article_path %>
-</table>
+<%= link_to 'Back', articles_path %>
 
 
 
-
-
+</div>
+</div>
 
 
     <!-- Bootstrap core JavaScript -->
